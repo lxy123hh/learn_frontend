@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+    .block {
+        width: 200px;
+        height: 100px;
+        background-color: green;
+
+    }
+    .test {
+        background-color: red;
+        transform: translate(100px,100px) rotate(45deg) scale(0.5,1.5);
+    }
+    .first {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        transition-property: all;
+        transition-duration: 2s;
+        transition-timing-function: linear;
+    }
+
+    @media screen and (max-width : 500px) {
+        .second {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    @media screen and (min-width:500px) and (max-width:1080px) {
+        .second {
+            width: 100px;
+            height: 100px;
+        }
+    }
+    @media screen and (min-width:1080px) {
+        .second {
+            width: 120px;
+            height: 120px;
+        }
+    }
+
+    .second {
+        /* width: 200px;
+        height: 200px; */
+        border-radius: 50%;
+        animation: circle 3s linear infinite;
+    }
+
+    .first:hover {
+        cursor: pointer;
+        transform: translate(0,-20px) rotate(360deg);
+    }
+    @keyframes circle {
+
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+        
+    }
+</style>
+<body>
+    <div class="block test"></div> 
+    <div class="block"></div> 
+    <br>
+    <img class="first" src="https://cdn.pixabay.com/photo/2025/03/18/17/03/dog-9478487_1280.jpg" alt="">
+    <img class="second" src="https://cdn.pixabay.com/photo/2025/03/18/17/03/dog-9478487_1280.jpg" alt="">
+</body>
+</html>

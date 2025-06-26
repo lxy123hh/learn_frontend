@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first {
+            color: red;
+        }
+        p {
+            color: green;
+
+        }
+        p:hover {
+            color: aqua;
+            cursor: pointer;
+        }
+        p::after {
+            content: "123";
+        }
+        #test_id {
+            color: blue;
+        } 
+        * {
+            margin: 0;
+        }
+
+        div > p {
+            color:yellow;
+        }
+
+
+ 
+
+    </style>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class = 'first'>类选择器</div>
+    <p>这是一段文本</p>
+    <div id="test_id">id选择器</div>
+    <div>
+        <p>第一层</p>
+        <h1>我是h1</h1>
+        <p>兄弟1</p>
+        <p>兄弟2</p>
+        <span><p>第二层</p></span>
+    </div>
+</body>
+</html>

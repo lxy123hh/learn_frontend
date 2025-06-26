@@ -1,0 +1,20 @@
+:root {
+  --font-weight: 800;
+}
+
+.test {
+  font-size: 40px;
+  color: red;
+  font-weight: var(--font-weight);
+}
+
+div p {
+  height: 100px;
+  width: 100px;
+  background-color: aqua;
+}
+div:hover p {
+  background-color: red;
+}
+
+/*# sourceMappingURL=index.css.map */

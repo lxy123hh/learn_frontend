@@ -1,0 +1,6 @@
+// 引用变量时，加上模块名
+@use 'base';
+
+.test {
+    background-color: base.$back-ground-color;
+}
