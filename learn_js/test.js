@@ -1,7 +1,10 @@
-if (true) {
-    let a = 10;
-    a = 20;
-    console.log(a);
-}
+a1 = function (a,b) {
+    console.log(a + b);
+};
 
-console.log(a); // This will throw an error because 'a' is not defined in this scope
+a2 = (a,b) => {
+    console.log(a + b);
+
+}
+a1(1,2);
+a2(2,3);
