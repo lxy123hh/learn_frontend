@@ -1,8 +1,5 @@
 let arr = [1, 2, 3, 4, 5];
-arr.forEach(function (item) {
-    console.log(item);
+let newarr = arr.map((item) => {
+    return item * 2;
 });
-
-arr.forEach((item,index) => {
-    console.log(index,item);
-})
+console.log(newarr); // [2, 4, 6, 8, 10]
