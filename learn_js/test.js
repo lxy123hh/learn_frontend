@@ -1,10 +1,8 @@
-a1 = function (a,b) {
-    console.log(a + b);
-};
+let arr = [1, 2, 3, 4, 5];
+arr.forEach(function (item) {
+    console.log(item);
+});
 
-a2 = (a,b) => {
-    console.log(a + b);
-
-}
-a1(1,2);
-a2(2,3);
+arr.forEach((item,index) => {
+    console.log(index,item);
+})
