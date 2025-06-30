@@ -1,3 +1,2 @@
-let arr = [1, 2, 3, 4, 5];
-let newarr = arr.map((item) => item * 2);
-console.log(newarr); // [2, 4, 6, 8, 10]
+let map = new Map();
+console.log(map); // This will throw an error because 'map' is not defined in this scope
