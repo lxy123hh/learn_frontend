@@ -1,7 +1,7 @@
-let map = new Map([
-  ['name', 'Tom'],
-  ['age', 25],
-  ['job', 'developer']
-]);
-map.set('age','25')
-console.log(map); // This will throw an error because 'map' is not defined in this scope
+const arr = [1, 2, 3, 4, 5];
+const arr1 = [{name: 1}, {name: 2}, {name:3}];
+
+const callback = function(a, arr) {
+  console.log(a, arr);
+}
+arr.forEach(callback);
