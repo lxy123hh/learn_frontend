@@ -1,6 +1,10 @@
 function persion() {
     this.name = 'persion';
     this.age = 18;
+    this.getName = function() {
+        console.log(this.name);
+    };
 }
 const p1 = new persion();
-console.log(p1); 
+console.log(p1);  
+p1.getName();  // 输出: persion 
