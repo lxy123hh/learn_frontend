@@ -1,6 +1,7 @@
-class Base {
+class Persion {
     constructor(name , age) {
         //构造函数中仅放属性
+        //属性是公开的，如何实现私有属性？
         this.name = name;
         this.age = age;
     }
@@ -13,7 +14,22 @@ class Base {
         this.name = name;
     }
 }
-const base = new Base('lxy', 18);
-const base2 = new Base('lxy2', 20);
-console.log(base); // lxy
-console.log(base2); // lxy2
+
+class Student extends Persion {
+    constructor(name, age, school) {
+        //调用父类的构造函数，若父类中有构造函数，子类必须调用父类的构造函数
+        super(name, age);//调用父类的构造函数
+        this.school = school;
+    }
+
+    getSchool() {
+        return this.school;
+    }
+
+    setSchool(school) {
+        this.school = school;
+    }
+}
+
+const s1 = new Student('张三', 18, '清华大学');
+console.log(s1);
