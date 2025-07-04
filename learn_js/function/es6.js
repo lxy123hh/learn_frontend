@@ -1,9 +1,11 @@
 class Persion {
     constructor(name , age) {
         //构造函数中仅放属性
-        //属性是公开的，如何实现私有属性？
-        this.name = name;
+        //属性是公开的
+        this.name= name;
         this.age = age;
+
+
     }
     //方法
     getName() {
@@ -32,4 +34,6 @@ class Student extends Persion {
 }
 
 const s1 = new Student('张三', 18, '清华大学');
+const s2 = new Persion('李四', 19);
 console.log(s1);
+console.log(s2);
