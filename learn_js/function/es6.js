@@ -1,8 +1,8 @@
 class Base {
-    constructor() {
+    constructor(name , age) {
         //构造函数中仅放属性
-        this.name = 'lxy';
-        this.age = 18;
+        this.name = name;
+        this.age = age;
     }
     //方法
     getName() {
@@ -13,7 +13,7 @@ class Base {
         this.name = name;
     }
 }
-const base = new Base();
-console.log(base.getName()); // lxy
-base.setName('lxy2');
-console.log(base.getName()); // lxy2
+const base = new Base('lxy', 18);
+const base2 = new Base('lxy2', 20);
+console.log(base); // lxy
+console.log(base2); // lxy2
