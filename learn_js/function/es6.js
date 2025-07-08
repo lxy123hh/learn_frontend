@@ -1,33 +1,39 @@
-class Person {
-    // 私有字段
-    #age;
+class Persion {
+    constructor(name , age) {
+        //构造函数中仅放属性
+        //属性是公开的
+        this.name= name;
+        this.age = age;
 
-    constructor(name, age) {
+
+    }
+    //方法
+    getName() {
+        return this.name;
+    }
+
+    setName(name) {
         this.name = name;
-        this.#age = age;  // 通过构造函数初始化私有字段
-    }
-
-    // 公共方法来访问私有字段
-    getAge() {
-        return this.#age;
-    }
-
-    // 公共方法来设置私有字段
-    setAge(age) {
-        if (age < 0) {
-            console.log('Age cannot be negative');
-        } else {
-            this.#age = age;
-        }
     }
 }
 
-const person = new Person('Alice', 30);
-console.log(person.name);  // Alice
-console.log(person.getAge());  // 30
+class Student extends Persion {
+    constructor(name, age, school) {
+        //调用父类的构造函数，若父类中有构造函数，子类必须调用父类的构造函数
+        super(name, age);//调用父类的构造函数
+        this.school = school;
+    }
 
-person.setAge(35);
-console.log(person.getAge());  // 35
+    getSchool() {
+        return this.school;
+    }
 
-// 直接访问私有字段会报错
-// console.log(person.#age);  // SyntaxError: Private field '#age' must be declared in an enclosing class
+    setSchool(school) {
+        this.school = school;
+    }
+}
+
+const s1 = new Student('张三', 18, '清华大学');
+const s2 = new Persion('李四', 19);
+console.log(s1);
+console.log(s2);

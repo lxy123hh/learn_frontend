@@ -6,5 +6,5 @@ function persion() {
     };
 }
 const p1 = new persion();
-console.log(p1);  
+console.log(p1);   //persion { name: 'persion', age: 18 }
 p1.getName();  // 输出: persion 
