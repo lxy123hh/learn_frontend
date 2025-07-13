@@ -13,3 +13,12 @@ function click_button() {
 }
 
 </script>
+
+<style>
+h1 {
+  color: blue;
+}
+button {
+  background-color: yellow;
+}
+</style>
