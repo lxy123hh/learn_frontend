@@ -2,9 +2,7 @@
   <>
     <h1>{{ test_message }}</h1>
     <button @click="click_button">点我</button>
-    
-    <getUserDate />
-    <getUserDate />
+    <el-button>sdf</el-button>
 </template>
 
 <script setup>
