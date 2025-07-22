@@ -1,6 +1,7 @@
 <template>
     <div class="container">
         <el-menu class="no-vertical" default-active="2"> 
+            
          <el-menu-item index="1">
           <el-icon><icon-menu /></el-icon>
           <span>Navigator One</span>
