@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue.js 响应性示例</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>{{ message }}</h1>
+    <button @click="changeMessage">点击我更改消息</button>
+    <button @click="resetMessage">重置消息</button>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        message: '你好，Vue!'
+      },
+      methods: {
+        changeMessage() {
+          this.message = '你点击了按钮！';  // 当数据变化时，Vue 会自动更新视图
+        },
+        resetMessage() {
+          this.message = '你好，Vue!';  // 重置消息
+        }
+      }
+    });
+  </script>
+</body>
+</html>
