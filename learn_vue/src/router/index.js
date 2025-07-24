@@ -6,7 +6,7 @@ const routes = [
   {
     path: '/user/:id',
     name: 'user',
-    component: () => import('@/views/User.vue'),
+    component: () => import('@/views/User.vue'), 
   }
 ]
 
